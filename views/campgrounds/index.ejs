@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campground Index </title>
+</head>
+<body>
+    <h1>View All campgrounds</h1>
+    <ul>
+        <%for(let c of campgrounds){%>
+            <li><a href="/campgrounds/<%=c._id%>"><%=c.title%> - <%=c.location%></a></li>        
+        <%}%>
+    </ul>
+
+    <form action="/campgrounds/new">
+        <button type="submit">Add new Campground</button>
+    </form>
+</body>
+</html>
